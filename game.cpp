@@ -6,7 +6,7 @@ char getUserOption(){
   std::cout << "<Rock Paper Scissors Game>" << std::endl;
 
   do{
-    std::cout << "Choose on of the following" << std::endl;
+    std::cout << "Choose one of the following" << std::endl;
     std::cout << "--------------------------" << std::endl;
     std::cout << " r -> rock" << std::endl;
     std::cout << " p -> paper" << std::endl;
@@ -14,7 +14,6 @@ char getUserOption(){
     std::cin >> player;
   }while(player != 'r' && player != 'p' && player != 's');
   
-  std::cout << player;
 
   return player;
 }
@@ -34,11 +33,11 @@ char getComputerOption(){
 
 void showOption(char option){
   switch(option){
-    case 'r': std::cout << "Rock" << std::endl
+    case 'r': std::cout << "Rock" << std::endl;
               break;
-    case 'p': std::cout << "Paper" << std::endl
+    case 'p': std::cout << "Paper" << std::endl;
               break;
-    case 's': std::cout << "Scissors" << std::endl
+    case 's': std::cout << "Scissors" << std::endl;
               break;
 
   }
@@ -57,23 +56,23 @@ void getWinner(char player, char computer){
               }
               break;
     case 'p': if (computer == 'r'){
-                  std::cout << "You lose!" << std::endl;
+                  std::cout << "You win!" << std::endl;
               }
               else if (computer == 'p'){
                   std::cout << "It's a tie!" << std::endl;
               }
               else{
-                  std::cout << "You win!" << std::endl;
+                  std::cout << "You lose!" << std::endl;
               }
               break;
     case 's': if (computer == 'r'){
-                  std::cout << "You win!" << std::endl;
+                  std::cout << "You lose!" << std::endl;
               }
               else if (computer == 'p'){
-                  std::cout << "You lose!" << std::endl;
+                  std::cout << "You win!" << std::endl;
               }
               else{
-                  std::cout << "You lose!" << std::endl;
+                  std::cout << "It's a tie!" << std::endl;
               }
               break;
   }
